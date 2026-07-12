@@ -23,8 +23,14 @@
     <section class="add-transaktion">
         <h2 class="add-transaktion__title">транзакция</h2>
         <form action="">
-            <input type="text" />
-            <input type="number" />
+         <div class="transaktion-name">
+            <label for="name">за что получил 💵/ на что потратил 💵</label>
+              <input type="text" id="name"/>
+         </div>
+         <div class="transaktion-money">
+           <label for="money">сколько 💵</label>
+              <input type="number" id="money"/>
+         </div>
             <button type="submit">добавить транзакцию</button>
         </form>
       </section>
