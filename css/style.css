@@ -85,3 +85,11 @@ section{
 .balance-income{
     border-right: 1px solid black;
 }
+
+.balance-income{
+    color: green;
+}
+
+.balance-excome{
+    color: red;
+}
