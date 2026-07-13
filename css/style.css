@@ -17,3 +17,19 @@
     max-width: 1440px;
     margin: 0 auto;
 }
+
+h1{
+    font-size: var(--text-xxl);
+    text-align: center;
+}
+
+h2{
+    font-size: var(--text-xl);
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+}
+
+h3{
+    font-size: var(--text-md);
+    font-weight: normal;
+}
