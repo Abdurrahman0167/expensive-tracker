@@ -33,3 +33,31 @@ h3{
     font-size: var(--text-md);
     font-weight: normal;
 }
+
+.transaktion-money,
+.transaktion-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.transaktion-input{
+    max-width: 300px;
+}
+
+.transaktion-name{
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: 0.5rem;
+}
+
+.transaktion-money{
+    margin-bottom: 0.8rem;
+}
+
+.transaktion-button{
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+}
