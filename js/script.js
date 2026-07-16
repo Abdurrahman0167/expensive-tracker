@@ -12,8 +12,15 @@ transictionButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(transactionName.value, transactionSum.value);
 
+  myBalanse();
+
   transactionName.value = "";
   transactionSum.value = "";
-
 });
 
+function myBalanse() {
+  let balance = document.createElement("p");
+  balance.textContent = transactionSum.value + "₽";
+  balance.classList.add("my-balanse");
+  actualBalance.append(balance);
+}

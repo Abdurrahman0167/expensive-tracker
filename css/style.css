@@ -93,3 +93,8 @@ section{
 .balance-excome{
     color: red;
 }
+
+.my-balance{
+     text-align: center;
+     font-size: 3rem;
+}
