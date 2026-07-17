@@ -60,6 +60,7 @@ label{
     width: 100%;
     max-width: 148px;
     padding: 10px;
+    border: none;
 }
 
 .transaktion-button-plus{
