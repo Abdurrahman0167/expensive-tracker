@@ -62,6 +62,15 @@ label{
     padding: 10px;
 }
 
+.transaktion-button-plus{
+    background: #006855;
+    color: white;
+}
+
+.transaktion-button-minus{
+    background: #C22308;
+    color: white;
+}
 
 section{
     margin-bottom: 8rem;
