@@ -54,6 +54,7 @@ label{
 
 .transaktion-money{
     margin-bottom: 0.8rem;
+    
 }
 
 .transaktion-button{
@@ -66,10 +67,23 @@ label{
 .transaktion-button-plus{
     background: #006855;
     color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 .transaktion-button-minus{
     background: #C22308;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.transaktion-button-plus:hover{
+    background: #019501;
+    color: white;
+}
+
+.transaktion-button-minus:hover{
+    background: #e62a09;
     color: white;
 }
 
