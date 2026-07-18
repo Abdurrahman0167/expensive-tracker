@@ -9,14 +9,3 @@ const addMoneyBtn = document.querySelector(".transaktion-button-plus");
 const subtractMoneyBtn = document.querySelector('."transaktion-button-minus')
 const transictionHistory = document.querySelector(".history");
 
-addMoneyBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log(transactionName.value, transactionSum.value);
-
-
-
-  transactionName.value = "";
-  transactionSum.value = "";
-});
-
-
