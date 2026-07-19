@@ -23,3 +23,27 @@ function addMoney() {
     transactionSum.value =''
   });
 }
+
+function strictMoney() {
+
+  subtractMoneyBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let value = Number(balance.textContent.replace("₽", ""));
+    let sum = Number(transactionSum.value);
+    value -= sum;
+    balance.textContent = value + "₽";
+
+    if(value < 0){
+      balance.textContent = '0₽'
+    }
+
+    transactionName.value =''
+    transactionSum.value =''
+  });
+}
+
+
+
+addMoney();
+strictMoney();
