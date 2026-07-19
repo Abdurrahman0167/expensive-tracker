@@ -71,6 +71,8 @@ function encomeHistory() {
 
   incomenBox.classList.add('income-history')
 
+  if(transactionName.value == '' ||  transactionSum.value == '') return
+
   incomeTitle.textContent = transactionName.value + ":";
   incomeSum.textContent = transactionSum.value + "₽";
   incomenBox.append(incomeTitle, incomeSum);
@@ -83,6 +85,8 @@ function excomeHistory(){
   let excomeSum = document.createElement("p")
 
   excomeBox.classList.add('excome-history')
+
+  if(transactionName.value == '' ||  transactionSum.value == '') return
 
   excomeTitle.textContent = transactionName.value + ":";
   excomeSum.textContent = transactionSum.value + "₽";
