@@ -19,13 +19,14 @@ function addMoney() {
     value += sum;
     balance.textContent = value + "₽";
 
-    transactionName.value =''
-    transactionSum.value =''
+    addIncome();
+
+    transactionName.value = "";
+    transactionSum.value = "";
   });
 }
 
 function strictMoney() {
-
   subtractMoneyBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -34,16 +35,20 @@ function strictMoney() {
     value -= sum;
     balance.textContent = value + "₽";
 
-    if(value < 0){
-      balance.textContent = '0₽'
+    if (value < 0) {
+      balance.textContent = "0₽";
     }
 
-    transactionName.value =''
-    transactionSum.value =''
+    transactionName.value = "";
+    transactionSum.value = "";
   });
 }
 
-
+function addIncome() {
+    let income = document.createElement("p");
+    income.textContent = transactionSum.value;
+    transictionIncome.append(income);
+}
 
 addMoney();
 strictMoney();
