@@ -135,4 +135,16 @@ section{
     padding: 0 1rem;
     max-width: 500px;
     border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.excome-history{
+    background-color: #e62a09;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
