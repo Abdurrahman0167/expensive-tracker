@@ -1,6 +1,5 @@
 "use strict";
 
-const actualBalance = document.querySelector(".actual-balance");
 const transictionIncome = document.querySelector(".balance-income");
 const transictionExcome = document.querySelector(".balance-excome");
 const transactionName = document.querySelector(".transaktion-name__input");
