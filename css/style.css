@@ -126,3 +126,13 @@ section{
      text-align: center;
      margin-bottom: 3rem;
 }
+
+.income-history{
+    background-color: #006855;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 500px;
+    border-radius: 10px;
+}
