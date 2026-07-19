@@ -15,6 +15,7 @@ addMoneyBtn.addEventListener("click", (event) => {
 
   addMoney();
   addIncome();
+  encomeHistory()
 
   transactionName.value = "";
   transactionSum.value = "";
@@ -61,4 +62,17 @@ function addExcome() {
   if (balance.textContent == "0₽") return;
 
   transictionExcome.append(excome);
+}
+
+function encomeHistory() {
+  let incomenBox = document.createElement("div");
+  let incomeTitle = document.createElement("p");
+  let incomeSum = document.createElement("p");
+
+  incomenBox.classList.add('income-history')
+
+  incomeTitle.textContent = transactionName.value + ":";
+  incomeSum.textContent = transactionSum.value + "₽";
+  incomenBox.append(incomeTitle, incomeSum);
+  transictionHistory.append(incomenBox)
 }
