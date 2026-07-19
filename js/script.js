@@ -25,6 +25,7 @@ subtractMoneyBtn.addEventListener("click", (event) => {
 
   strictMoney();
   addExcome();
+  excomeHistory()
 
   transactionName.value = "";
   transactionSum.value = "";
@@ -74,4 +75,17 @@ function encomeHistory() {
   incomeSum.textContent = transactionSum.value + "₽";
   incomenBox.append(incomeTitle, incomeSum);
   transictionHistory.append(incomenBox)
+}
+
+function excomeHistory(){
+  let excomeBox = document.createElement("div")
+  let excomeTitle = document.createElement("p")
+  let excomeSum = document.createElement("p")
+
+  excomeBox.classList.add('excome-history')
+
+  excomeTitle.textContent = transactionName.value + ":";
+  excomeSum.textContent = transactionSum.value + "₽";
+  excomeBox.append(excomeTitle, excomeSum);
+  transictionHistory.append(excomeBox)
 }
