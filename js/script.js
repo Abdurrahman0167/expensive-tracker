@@ -10,48 +10,55 @@ const subtractMoneyBtn = document.querySelector(".transaktion-button-minus");
 const transictionHistory = document.querySelector(".history");
 const balance = document.querySelector(".my-balance");
 
-
 addMoneyBtn.addEventListener("click", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    addMoney();
-    addIncome();
+  addMoney();
+  addIncome();
 
-    transactionName.value = "";
-    transactionSum.value = "";
-  });
+  transactionName.value = "";
+  transactionSum.value = "";
+});
 
-   subtractMoneyBtn.addEventListener("click", (event) => {
-    event.preventDefault();
+subtractMoneyBtn.addEventListener("click", (event) => {
+  event.preventDefault();
 
-    strictMoney();
-    
-    transactionName.value = "";
-    transactionSum.value = "";
-  });
+  strictMoney();
+  addExcome();
+
+  transactionName.value = "";
+  transactionSum.value = "";
+});
 
 function addMoney() {
   let value = Number(balance.textContent.replace("₽", ""));
-    let sum = Number(transactionSum.value);
-    value += sum;
-    balance.textContent = value + "₽";
+  let sum = Number(transactionSum.value);
+  value += sum;
+  balance.textContent = value + "₽";
 }
 
 function strictMoney() {
- let value = Number(balance.textContent.replace("₽", ""));
-    let sum = Number(transactionSum.value);
-    value -= sum;
-    balance.textContent = value + "₽";
+  let value = Number(balance.textContent.replace("₽", ""));
+  let sum = Number(transactionSum.value);
+  value -= sum;
+  balance.textContent = value + "₽";
 
-    if (value < 0) {
-      balance.textContent = "0₽";
-    }
-
+  if (value < 0) {
+    balance.textContent = "0₽";
+  }
 }
 
 function addIncome() {
-    let income = document.createElement("p");
-    income.textContent = transactionSum.value;
-    transictionIncome.append(income);
+  let income = document.createElement("p");
+  income.textContent = transactionSum.value;
+  transictionIncome.append(income);
 }
 
+function addExcome() {
+  let excome = document.createElement("p");
+  excome.textContent = transactionSum.value;
+
+  if (balance.textContent == "0₽") return;
+
+  transictionExcome.append(excome);
+}
