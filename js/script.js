@@ -10,27 +10,35 @@ const subtractMoneyBtn = document.querySelector(".transaktion-button-minus");
 const transictionHistory = document.querySelector(".history");
 const balance = document.querySelector(".my-balance");
 
-function addMoney() {
-  addMoneyBtn.addEventListener("click", (event) => {
+
+addMoneyBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
-    let value = Number(balance.textContent.replace("₽", ""));
-    let sum = Number(transactionSum.value);
-    value += sum;
-    balance.textContent = value + "₽";
-
+    addMoney();
     addIncome();
 
     transactionName.value = "";
     transactionSum.value = "";
   });
+
+   subtractMoneyBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    strictMoney();
+    
+    transactionName.value = "";
+    transactionSum.value = "";
+  });
+
+function addMoney() {
+  let value = Number(balance.textContent.replace("₽", ""));
+    let sum = Number(transactionSum.value);
+    value += sum;
+    balance.textContent = value + "₽";
 }
 
 function strictMoney() {
-  subtractMoneyBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let value = Number(balance.textContent.replace("₽", ""));
+ let value = Number(balance.textContent.replace("₽", ""));
     let sum = Number(transactionSum.value);
     value -= sum;
     balance.textContent = value + "₽";
@@ -39,9 +47,6 @@ function strictMoney() {
       balance.textContent = "0₽";
     }
 
-    transactionName.value = "";
-    transactionSum.value = "";
-  });
 }
 
 function addIncome() {
@@ -50,5 +55,3 @@ function addIncome() {
     transictionIncome.append(income);
 }
 
-addMoney();
-strictMoney();
