@@ -148,3 +148,10 @@ section{
     border-radius: 10px;
     margin-bottom: 1rem;
 }
+
+@media(max-width: 590px){
+    *{
+        margin: 0 auto;
+        text-align: center;
+}
+}
